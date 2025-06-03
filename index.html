@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    h1 {
+      color: white;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-800">
+  <div class="w-full max-w-sm p-4 bg-gray-900 rounded-md shadow-md">
+    <div class="flex flex-col items-center justify-center">
+      <h1>YACA GYM</h1>
+      <img src="./img/logo2.png" width="200px" alt="Logo" />
+      <span class="text-xl font-medium text-white mt-4">Iniciar Sesión</span>
+    </div>
+    <p id="error" class="text-red-500 text-sm mb-4 hidden">Usuario o contraseña incorrectos.</p>
+    <form id="loginForm" class="mt-4">
+      <input type="text" id="username" placeholder="Usuario" class="block w-full px-3 py-2 mt-1 text-white bg-gray-700 rounded-md" required />
+      <input type="password" id="password" placeholder="Contraseña" class="block w-full px-3 py-2 mt-3 text-white bg-gray-700 rounded-md" required />
+      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded mt-6">Iniciar Sesión</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if (user === 'admin' && pass === '1234') {
+        localStorage.setItem('loggedIn', 'true');
+        window.location.href = 'dashboard.html';
+      } else {
+        document.getElementById('error').classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
