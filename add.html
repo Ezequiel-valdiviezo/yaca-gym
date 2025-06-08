@@ -8,11 +8,11 @@
 </head>
 <body class="bg-gray-100 p-8">
   <div class="flex justify-between items-center mb-8">
-    <h1 class="text-3xl font-bold">Agregar Cliente</h1>
-    <a href="dashboard.html" class="bg-blue-500 text-white px-4 py-2 rounded">Volver</a>
+    <h1 class="text-5xl font-bold">Agregar Cliente</h1>
+    <a href="dashboard.html" class="text-3xl bg-blue-500 text-white px-4 py-2 rounded">Volver</a>
   </div>
 
-  <div class="bg-white p-6 rounded shadow">
+  <div class="text-3xl bg-white p-6 rounded shadow">
     <form id="addForm">
       <div class="grid grid-cols-2 gap-4 mb-4">
         <input type="text" id="nombre" placeholder="Nombre" class="border px-4 py-2 rounded" required />
@@ -30,9 +30,9 @@
   </div>
 
   <script>
-    if (localStorage.getItem('loggedIn') !== 'true') {
-      window.location.href = 'index.html';
-    }
+    // if (localStorage.getItem('loggedIn') !== 'true') {
+    //   window.location.href = 'index.html';
+    // }
 
     document.getElementById('addForm').addEventListener('submit', function (e) {
       e.preventDefault();

@@ -5,21 +5,23 @@
   <meta charset="UTF-8" />
   <title>Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 </head>
 <body class="bg-gray-100 p-8">
   <div class="flex justify-between items-center mb-8">
-    <h1 class="text-3xl font-bold">Clientes</h1>
-    <a href="#" id="logout" class="bg-red-500 text-white px-4 py-2 rounded">Cerrar sesión</a>
+    <h1 class="text-5xl font-bold">Clientes</h1>
+    <a href="#" id="logout" class="text-3xl bg-red-500 text-white px-4 py-2 rounded">Cerrar sesión</a>
   </div>
 
   <div class="text-center mb-6">
-    <button class="bg-green-500 text-white px-4 py-2 rounded"><a href="./add.html">Agregar cliente</a></button>
+    <button class="text-3xl bg-green-500 text-white px-4 py-2 rounded"><a href="./add.html">Agregar cliente</a></button>
   </div>
 
-  <div class="bg-white p-6 rounded shadow mb-8">
+  <div class="text-3xl bg-white p-6 rounded shadow mb-8">
     <table id="clientes" class="display" style="width:100%">
       <thead>
         <tr>
@@ -34,9 +36,9 @@
   </div>
 
   <script>
-    if (localStorage.getItem('loggedIn') !== 'true') {
-      window.location.href = 'index.html';
-    }
+    // if (localStorage.getItem('loggedIn') !== 'true') {
+    //   window.location.href = 'index.html';
+    // }
 
     const clientes = [
     ["Juan", "Pérez", "2025-06-01", "Libre"],
@@ -64,7 +66,6 @@
     ["Emilia", "Delgado", "2025-06-01", "Libre"],
     ["Benjamín", "Figueroa", "2025-05-30", "4 Clases"],
     ["Florencia", "Ibarra", "2025-06-05", "Libre"],
-      // ... otros clientes ...
     ];
 
     const tbody = document.getElementById('clientes-body');
@@ -87,7 +88,7 @@
     });
 
     document.getElementById('logout').addEventListener('click', function () {
-      localStorage.removeItem('loggedIn');
+      // localStorage.removeItem('loggedIn');
       window.location.href = 'index.html';
     });
   </script>

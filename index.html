@@ -30,18 +30,23 @@
       <img src="./img/logo2.png" width="400px" alt="Logo" />
       <span class="text-5xl font-medium text-white mt-4">Iniciar Sesión</span>
 
-       <form class="mt-4 text-center">
-        <input type="text" placeholder="Usuario" class=" w-[100%] px-5 py-5 mt-1 text-white bg-gray-700 rounded-md text-3xl" required />
-        <input type="password" placeholder="Contraseña" class=" w-[100%] px-5 py-5 mt-3 text-white bg-gray-700 rounded-md text-3xl" required />
+      <form id="loginForm" class="mt-4 text-center">
+        <input type="text" placeholder="Usuario" class=" w-[100%] px-5 py-5 mt-1 text-white bg-gray-700 rounded-md text-3xl" />
+        <input type="password" placeholder="Contraseña" class=" w-[100%] px-5 py-5 mt-3 text-white bg-gray-700 rounded-md text-3xl" />
         <button type="submit" class=" w-[100%] bg-blue-500 hover:bg-blue-600 text-white py-5 rounded mt-6 text-3xl">Iniciar Sesión</button>
       </form>
     </div>
   </div>
 
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // evita que recargue la página
+    window.location.href = './dashboard.html'; // redirige
+  });
+</script>
 
 
-
-  <script>
+  <!-- <script>
     document.getElementById('loginForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const user = document.getElementById('username').value;
@@ -53,6 +58,6 @@
         document.getElementById('error').classList.remove('hidden');
       }
     });
-  </script>
+  </script> -->
 </body>
 </html>
