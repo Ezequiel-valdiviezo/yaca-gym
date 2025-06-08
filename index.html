@@ -5,30 +5,38 @@
   <meta charset="UTF-8" />
   <title>Login</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    * {
-      font-family: 'Bebas Neue', sans-serif;
-    }
-    h1 {
-      color: white;
-      font-size: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
 </head>
-<body class="flex items-center justify-center h-screen bg-gray-800">
-  <div class="p-4 bg-gray-900 rounded-md shadow-md w-[90%]">
-    <div class="flex flex-col items-center justify-center">
-      <h1>YACA GYM</h1>
-      <img src="./img/logo2.png" width="200px" alt="Logo" />
-      <span class="text-xl font-medium text-white mt-4">Iniciar Sesión</span>
+<body>
+  <!-- <div class="flex items-center justify-center h-screen bg-gray-800">
+    <div class="p-4 bg-gray-900 rounded-md shadow-md w-[90%]">
+      <div class="flex flex-col items-center justify-center">
+        <h1>YACA GYM</h1>
+        <img src="./img/logo2.png" width="200px" alt="Logo" />
+        <span class="text-xl font-medium text-white mt-4">Iniciar Sesión</span>
+      </div>
+      <p id="error" class="text-red-500 text-sm mb-4 hidden">Usuario o contraseña incorrectos.</p>
+      <form id="loginForm" class="mt-4">
+        <input type="text" id="username" placeholder="Usuario" class="block w-full px-3 py-2 mt-1 text-white bg-gray-700 rounded-md" required />
+        <input type="password" id="password" placeholder="Contraseña" class="block w-full px-3 py-2 mt-3 text-white bg-gray-700 rounded-md" required />
+        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded mt-6">Iniciar Sesión</button>
+      </form>
     </div>
-    <p id="error" class="text-red-500 text-sm mb-4 hidden">Usuario o contraseña incorrectos.</p>
-    <form id="loginForm" class="mt-4">
-      <input type="text" id="username" placeholder="Usuario" class="block w-full px-3 py-2 mt-1 text-white bg-gray-700 rounded-md" required />
-      <input type="password" id="password" placeholder="Contraseña" class="block w-full px-3 py-2 mt-3 text-white bg-gray-700 rounded-md" required />
-      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded mt-6">Iniciar Sesión</button>
-    </form>
+  </div> -->
+  <div class="contenedor bg-gray-800">
+    <div class="p-16 flex flex-col items-center bg-gray-900 w-[90%]">
+      <h1 class="text-5xl text-white">YACA GYM</h1>
+       <img src="./img/logo2.png" width="400px" alt="Logo" />
+       <form class="mt-4 text-center">
+        <input type="text" placeholder="Usuario" class=" w-[100%] px-3 py-2 mt-1 text-white bg-gray-700 rounded-md text-3xl" required />
+        <input type="password" placeholder="Contraseña" class=" w-[100%] px-3 py-2 mt-3 text-white bg-gray-700 rounded-md text-3xl" required />
+        <button type="submit" class=" w-[100%] bg-blue-500 hover:bg-blue-600 text-white py-2 rounded mt-6 text-3xl">Iniciar Sesión</button>
+      </form>
+    </div>
   </div>
+
+
+
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', function (e) {
